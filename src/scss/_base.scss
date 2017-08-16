@@ -5,11 +5,20 @@ html, body {
 }
 
 #search_group_index {
-    margin-top: 150;
+    margin-top: 180;
 }
-#search-product {
+#search-product-index {
   background: none;
-  color: #d47c34;
+  border: 1px solid darkorange;
+  color: cornsilk;
+  &:hover, &:focus {
+    border: 1px solid cornsilk;
+    box-shadow: 0 0 10px 1px rgba(205,205,205,0.3);
+  }
+}
+.prod-image {
+    width: 50%;
+    height: 170px;
 }
 
 main.main-container {
@@ -178,18 +187,12 @@ hr {
   }
 }
 .box-size {
-  width: 360px;
-  height: 220px;
-  margin: 5px 10px 0;
-  margin-bottom: 20px;
-  left: 2%;
+  width: 450px;
+  height: 500px;
 }
-.box-left {
-  left: 18%;
-}
+
 .box-background {
-  background: rgba(238,238,238,1);
-  background: linear-gradient(#ffffff 0%, rgb(212, 212, 212) 100%);
+  background: transparent;
 }
 
 .prod-name {

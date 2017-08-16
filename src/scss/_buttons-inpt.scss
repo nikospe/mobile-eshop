@@ -38,14 +38,10 @@ input {
   &:hover, &:focus, &:visited, &:focus:active {
     border: 1px solid $main-color;
     border-radius: 0;
-    background: $main-color;
     box-shadow: none;
     -webkit-box-shadow: none;
     text-shadow: none;
     outline: none;
-  }
-  &:hover {
-    color: dodgerblue;
   }
 }
 
@@ -53,7 +49,11 @@ input {
   text-align: center;
   margin-top: 20px;
 }
-
+.search-product {
+  &:hover{
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+  }
+}
 .search_buttons {
     height: 40px;
     margin-top: 5px;
@@ -61,7 +61,7 @@ input {
     color: white;
     border: 1px solid #a7510b;
     &:hover {
-      background: $main-orange;
+      box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
     }
 }
 .search_button {
@@ -72,6 +72,15 @@ input {
   border: 1px solid #a7510b;
   &:hover {
     background: $main-orange;
+  }
+}
+#search_button_index {
+  background: none;
+  border: 1px solid darkorange;
+  color: lightgrey;
+  &:hover {
+    border: 1px solid cornsilk;
+    box-shadow: 0 0 10px 1px rgba(205,205,205,0.3);
   }
 }
 .search-label {

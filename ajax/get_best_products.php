@@ -1,7 +1,7 @@
 <?php
     require_once('../php/database_connect.php');
 
-    $sql = "SELECT p.name, p.type, p.id, AVG( r.rating_strength ) AS avg
+    $sql = "SELECT p.name, p.image, p.id, AVG( r.rating_strength ) AS avg
             FROM products AS p
             JOIN ratings AS r ON r.prod_id = p.id
             GROUP BY p.name

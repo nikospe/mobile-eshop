@@ -96,7 +96,7 @@ $(document).ready(function(){
     url: 'ajax/products_names.php',
     success: function(_data) {
         data.products = _data.product;
-        $( "#search-product" ).autocomplete({
+        $( ".search-product" ).autocomplete({
             source: data.products.map( product => product.name ),
             delay: 400,
             response: function(event, ui) {
@@ -114,7 +114,7 @@ $(document).ready(function(){
 /** Remove dropdown menu on focus out */
 // $('#product-search-box-empty').on('focusout', function() {
 $(document).ready(function(){
-    $('#search-product').on('focusout', function(){
+    $('.search-product').on('focusout', function(){
         var clicked = false;
         if ( $('#product-search-box-empty').css('display') == 'block' ) {
             $("#product-search-box-empty").click(function(){
@@ -143,7 +143,7 @@ function drawRatingStars(num) {
 
     return result;
 }
-$.post('ajax/get_best_products.php', {limit: 5}, function (response) {
+$.post('ajax/get_best_products.php', {limit: 6}, function (response) {
     if (response.error) {
         alert(response.error);
         return;
@@ -156,7 +156,7 @@ $.post('ajax/get_best_products.php', {limit: 5}, function (response) {
         product.link = 'product.html?id=' + product.id;
         $el.find('a').attr('href', product.link);
         $el.find('.prod-name').text(product.name); 
-        $el.find('.prod-type').text(product.type); 
+        $el.find('.prod-image').attr("src",""+product.image+""); 
         $el.find('.prod-avg').html( drawRatingStars(product.avg) + '(' + product.avg + ')' ); 
     }
 
