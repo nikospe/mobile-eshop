@@ -1,0 +1,127 @@
+input {
+  border-radius: 0;
+  box-shadow: 0;
+  &.form-control {
+    border-radius: 0;
+    box-shadow: 0;
+    &:focus {
+      border-color: lightgrey;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $main-color;
+    }
+  }
+}
+
+.btn-info {
+  background: $main-color;
+  border: 0;
+  border-radius: 0;
+  &:visited {
+    background: $main-color;
+    border: 0;
+    border-radius: 0;
+  }
+  &:hover, &:active, &:hover:active {
+    background: $main-color-darker;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.btn {
+  color: white;
+  background: $main-color;
+  border: 1px solid $main-color;
+  border-radius: 0;
+  text-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  &:hover, &:focus, &:visited, &:focus:active {
+    border: 1px solid $main-color;
+    border-radius: 0;
+    background: $main-color;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+    outline: none;
+  }
+  &:hover {
+    color: dodgerblue;
+  }
+}
+
+.butoons_row {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search_buttons {
+    height: 40px;
+    margin-top: 5px;
+    background: $main-orange;
+    color: white;
+    border: 1px solid #a7510b;
+    &:hover {
+      background: $main-orange;
+    }
+}
+.search_button {
+  height: auto;
+  width: auto;
+  background: $main-orange;
+  color: white;
+  border: 1px solid #a7510b;
+  &:hover {
+    background: $main-orange;
+  }
+}
+.search-label {
+  border: 1px solid $main-orange;
+  height: 40px;
+  margin-top: 5px;
+  width: 100%;
+}
+.search-input {
+  border: 1px solid $main-orange;
+}
+.r-inline {
+  display: inline-flex;
+  padding: 2px;
+  margin: auto;
+}
+.insert-but { 
+  height: auto;
+  width: 75%;   
+  padding-bottom: 9%;
+  padding-top: 9%;
+}
+
+.rating-button {
+  border: 1px solid $main-blue;
+  color : #707070;
+  padding : 3px;
+  margin-right: 7px;
+}
+.profile-buttons {
+  margin-left: 200px;
+}
+.rate_pr_but{
+  left: 123px;
+}
+.add_st_but{
+  left: 85;
+}
+.profile-buttons-serv {
+  margin-left: 285px;
+}
+.add_se_but{
+  left: 50px;
+}
+
+.modal-hide-on-exist, .modal-hide-on-exist-message, .modal-add-new-store, #select_store_message {
+  display: none;
+}
+
+.statistic-btn {
+  margin-left: 100px;
+  display: none;
+}

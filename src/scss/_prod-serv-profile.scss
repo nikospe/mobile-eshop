@@ -1,0 +1,132 @@
+.my_header {
+  margin-top : 50px;
+  padding-left : 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #d0d4d9; 
+}
+
+.header_title {
+  color : $main-orange;
+  margin-top: 25px;
+}
+.search-product-page {
+  margin-top: 12px;
+}
+.header_search {
+  padding-top: 10px;
+}
+.marg-ten{
+  margin-top: 15px;
+}
+.product-img {
+    width: 100%;
+    min-height: 100px;
+    max-height: 400px;
+}
+.shop-logo-row {
+  padding: 10px;
+  border-right: 1px solid lightgray;
+}
+.fif {
+  margin-top: 55px;
+}
+.comment-box {
+  padding-left: 0;
+}
+.rating-stars {
+  margin-top: 25px;
+}
+.shop-logo {
+  float : left;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid #707070;
+}
+.stores-image {
+  width: 150px;
+  height: 65px;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+}
+.fixed {
+  position: fixed;
+  top: 70px;
+}
+.profile {
+  background: white;
+  padding: 25px;
+  min-width: 300px;
+  max-width: 270px;
+  //height: 400px;
+
+}
+.descript-stores {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.stores-left {
+  left : 28%;
+}
+.rate-left {
+  width: 64%;
+  left: 31%;
+}
+
+#rate-title {
+  margin-top: 5px;
+  height: 35px;
+  width: 340px;
+  max-width: 340px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.stores-service-left {
+  left: 360px;
+  width: 750px;
+}
+.keep-right {
+  //position: absolute;
+  //left: 2%;
+  right: 700px;
+  margin-bottom: -160px;
+}
+.marg-left {
+  margin-left: 30px;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+.google_map_none {
+  display: none;
+}
+.text_to_end {
+  text-align: end;
+}
+#title {
+  margin-top: 5px;
+  max-width: 330px;
+  width: 330px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+.titles {
+  color: $main-blue;
+}
+.addresses {
+  color: gray;
+}
+.inlineClass {
+  display: inline;
+}
+.empty-page, #statistics {
+  display: none;
+}
