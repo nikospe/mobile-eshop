@@ -46,3 +46,17 @@ nav {
     display: none;
   } 
 }
+
+#nav-cart-img {
+  max-height: 25px;
+}
+
+#nav-cart {
+  &:hover {
+    color: white;
+  }
+}
+
+#logo-cart {
+  max-height: 100px;
+}

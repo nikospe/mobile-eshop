@@ -49,7 +49,13 @@
                             <li><a href="signup.html">Sign up</a></li>
                         </ul>
                     </li>
-                    <li class="nav-logout"><a href="#" data-toggle="modal" data-target="#myModal2">Logout!</a></li> 
+                    <li class="nav-logout"><a href="#" data-toggle="modal" data-target="#myModal2">Logout!</a></li>                     
+                    <li class="subNav @gulp@cart" id="nav-cart">
+                        <a href="#" data-toggle="modal" data-target="#cartModal">
+                            <img src="img/cartico.png" id="nav-cart-img">
+                            Your cart
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -139,7 +145,7 @@
     <div class="for-display">
         <div class="row marg-left">
             <div class="col-md-3 profile shadow-3 visible-lg-block absolute" id="profile">
-                <img class="product-img" src="img/Products.jpg" align="middle" id="product-image">
+                <img class="product-img" src="" align="middle" id="product-image">
                 <h4 id="prod-title"></h4> 
                 <hr>                
                 <div class="stable-rating">
@@ -273,7 +279,6 @@
         <div class="modal-content modals-background">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <img src="img/mylogo.png" style="max-height:50px;">
                 <h4 class="modal-title logo">Sign in!</h4>
             </div>
             <div class="modal-body">
@@ -318,6 +323,32 @@
                     <button type="button" class="btn btn-info" onclick="logout();">Logout</button>
                     <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal -->
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" role="dialog">
+    <div class="modal-dialog myModal-content">
+        <!-- Modal content-->
+        <div class="modal-content modals-background">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title logo">Shopping cart</h4>
+                <img src="img/cart2.png" id="logo-cart">
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-xs-12 col-md-12">
+                        <p class="submain-color">See your products</p><br>
+                        
+                    </div>                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success butoons_row" type="submit" data-dismiss="modal">Continue shopping</button>
+                <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Make order</button>
             </div>
         </div>
     </div>
