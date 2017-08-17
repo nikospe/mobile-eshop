@@ -92,30 +92,6 @@
   border: 2px solid lightgray;
 }
 
-.user_activity {
-    background: whitesmoke;
-}
-#users-info {
-    padding-top: 15px;
-    padding-left: 20px;
-    margin-left: 10px;
-    padding-bottom: 30px;
-    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
-}
-#users-activity {
-  width: 65%;
-  padding-left: 15px;
-  left: 1%;
-  box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
-}
-.activity-header{
-  //background: #a7510b;
-  background: linear-gradient(#fff 0%, #d4d4d4 100%);
-  //color: white;
-  border: 1px solid #365899;
-  padding: 7px;
-  text-align: center;
-}
 .fixed-pos{
   position: fixed;
   width: 380px;
@@ -126,27 +102,8 @@
 .absolute-pos{
   position: absolute;
   bottom: 0;
-  //height: 530px;
   width: 380px;
 }
 .absolute-poss{
   position: absolute;
-}
-#activity-head{
-  z-index: 10000;
-  margin-top: 5px;
-  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
-  text-align: center;
-  background: whitesmoke;
-  padding-right: 25px;
-  margin-left: 409px;
-  padding-bottom: 10px;
-  width: 760px;
-
-}
-#activity-head-row{
-  margin-right: 10px;
-}
-#activity-body-row {
-  margin-top: 5px;
 }

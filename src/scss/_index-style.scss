@@ -4,7 +4,7 @@
 }
 
 .white-background {
-  background: white; // #f8f8f8;
+  background: white;
 }
 .submain-color {
   color: $main-orange;
@@ -15,14 +15,6 @@
 
 #index_info {
   max-width: 600px;
-}
-
-#service-search-bar{
-  display: none;
-}
-
-#store-search-bar{
-  display: none;
 }
 
 body#index .nav-pills {

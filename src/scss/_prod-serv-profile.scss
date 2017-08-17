@@ -19,7 +19,7 @@
   margin-top: 15px;
 }
 .product-img {
-    width: 100%;
+    width: auto;
     min-height: 100px;
     max-height: 400px;
 }
@@ -62,13 +62,7 @@
   padding: 25px;
   min-width: 300px;
   max-width: 270px;
-  //height: 400px;
-
-}
-.descript-stores {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 20px;
+  text-align: center;
 }
 
 .stores-left {
@@ -88,13 +82,7 @@
   padding: 5px;
 }
 
-.stores-service-left {
-  left: 360px;
-  width: 750px;
-}
 .keep-right {
-  //position: absolute;
-  //left: 2%;
   right: 700px;
   margin-bottom: -160px;
 }
