@@ -2,10 +2,8 @@ var app = angular.module('cartApp', []);
 
 class Bestproducts {
     constructor( ) {
-        
     }
 }
-
 app.component('bestproducts', {
   bindings: {        
     },
@@ -19,6 +17,37 @@ app.component('bestproducts', {
     controller: Bestproducts
 });
 
+class Cart {
+    constructor( ) {
+    }
+}
+app.component('cart', {
+  bindings: {        
+    },
+    template: `<div class="modal fade" id="cartModal" role="dialog">
+                    <div class="modal-dialog myModal-content">
+                        <div class="modal-content modals-background">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title logo">Shopping cart</h4>
+                                <img src="img/cart2.png" id="logo-cart">
+                            </div>
+                            <div class="modal-body">
+                                <div class="row text-center">
+                                    <div class="col-xs-12 col-md-12">
+                                        <p class="submain-color">See your products</p><br>
+                                    </div>                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success butoons_row" type="submit" data-dismiss="modal">Continue shopping</button>
+                                <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Make order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`,
+    controller: Cart
+});
 
 function addToCart () {
     alert("added!");
