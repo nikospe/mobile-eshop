@@ -157,7 +157,9 @@ $.post('ajax/get_best_products.php', {limit: 6}, function (response) {
         $el.find('a').attr('href', product.link);
         $el.find('.prod-name').text(product.name); 
         $el.find('.prod-image').attr("src",""+product.image+""); 
-        $el.find('.prod-avg').html( drawRatingStars(product.avg) + '(' + product.avg + ')' ); 
+        $el.find('.prod-avg').html( drawRatingStars(product.avg) + '(' + product.avg + ')' );
+        $el.find('.prod-price').text(product.price + "€"); 
+        $el.find('.btn').attr('id', ""+product.id+"");
     }
 
 }, 'json');

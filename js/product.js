@@ -73,6 +73,8 @@ if ( urlParams.hasOwnProperty('id') ) {
                 $('#product-type').html(product.type);
                 $('#product-description').html(product.description);
                 $('#element').attr("placeholder", product.name);
+                $('.prod-price').html("Price: "+ product.price +"€");
+                $('.prod-code').html("Product code: MYEU"+product.id);
                 productId = product.id;                
             } 
             else {                

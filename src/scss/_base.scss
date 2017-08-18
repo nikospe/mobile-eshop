@@ -4,6 +4,10 @@ html, body {
   position: relative;
 }
 
+.row {
+  margin-top: 15px;
+}
+
 #search_group_index {
     margin-top: 180;
 }
@@ -184,6 +188,16 @@ hr {
   margin-bottom: 0;
 }
 
+.prod-price {
+  color: darkred;
+}
+
 .cart-button {
   max-height: 20%;
+}
+
+.color-selector {
+  width: 80px;
+  height: 30px;
+  border: 1px solid cornflowerblue;
 }

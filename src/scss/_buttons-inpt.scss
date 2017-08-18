@@ -102,3 +102,13 @@ input {
 .modal-hide-on-exist, .modal-hide-on-exist-message, .modal-add-new-store, #select_store_message {
   display: none;
 }
+
+.add-cart-button, .btn-info, .btn-success {
+  &:hover {
+     box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+     background: $main-color;
+  }
+  &:focus, &:active, &:visited {
+    background: $main-color;
+  }
+}

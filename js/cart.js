@@ -1,18 +1,27 @@
 var app = angular.module('cartApp', []);
 
+var cartProducts = [];
+
 class Bestproducts {
     constructor( ) {
     }
+
+    addToCart (el) {
+        alert("added!"+el.target.id);
+        
+    }
 }
+
 app.component('bestproducts', {
-  bindings: {        
+  bindings: {      
     },
     template: `<div class="col-md-6 col-sm-12 text-center box-size box-background"
                 ng-repeat = 'value in [ "p0","p1","p2","p3","p4","p5"]' id="{{value}}">                
                 <img src"" class="prod-image">
                 <a href=""><h4 class="prod-name capitals titles"></h4></a>
                 <h5 class="prod-avg"></h5>
-                <a href="#" onclick="addToCart();"><img src="img/cartbut.png" class="cart-button"></a>
+                <h5 class="prod-price"></h5>
+                <button class="btn btn-info add-cart-button" ng-click="$ctrl.addToCart($event)">Add to cart</button>
             </div>`,
     controller: Bestproducts
 });
@@ -48,7 +57,3 @@ app.component('cart', {
                 </div>`,
     controller: Cart
 });
-
-function addToCart () {
-    alert("added!");
-}
