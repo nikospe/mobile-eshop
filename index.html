@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="img/mob.png">
-                            
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>                        
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">    
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
@@ -99,45 +99,12 @@
                 </h4>
             </div>
         </div>
-        <div class="row">
+        <div class="row" ng-app="cartApp">
             <h4 class="addresses text-center">
                 <i class='glyphicon glyphicon-star-semi'></i> Your best products
                 <i class='glyphicon glyphicon-star-semi'></i>
             </h4>
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p0">                
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p1">
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p2">
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p3">
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p4">
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
-            <div class="col-md-6 col-sm-12 text-center box-size box-background" id="p5">
-                <img src"" class="prod-image">
-                <a href=""><h4 class="prod-name capitals titles"></h4></a>
-                <h5 class="prod-avg"></h5>
-            </div>
+            <bestproducts></bestproducts>
         </div>
     </main>
 </div>
@@ -381,8 +348,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/cart.js"></script>
 <script src="js/main.js"></script>
 <script src="js/modals.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js"></script>    
 </body>
 </html>
