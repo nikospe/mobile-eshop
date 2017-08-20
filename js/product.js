@@ -75,6 +75,10 @@ if ( urlParams.hasOwnProperty('id') ) {
                 $('#product-title').html(product.name);
                 $('#product-type').html(product.type);
                 $('#product-description').html(product.description);
+                var descrpt = product.description.split(',');
+                for (var i=0; i<descrpt.length; i++) {
+                    $("<hr><h5>"+descrpt[i]+"</h5>").appendTo('#description-pattern');
+                }
                 $('#element').attr("placeholder", product.name);
                 $('.prod-price').html("Price: "+ product.price +"€");
                 $('.prod-code').html("Product code: MYEU"+product.id);
@@ -116,6 +120,10 @@ else if ( !('' in urlParams) ) {
             $('#product-title').html(products[0].name);
             $('#product-type').html(products[0].type);
             $('#product-description').html(products[0].description);
+            var descrpt = products[0].description.split(',');
+            for (var i=0; i<descrpt.length; i++) {
+                $("<hr><h5>"+descrpt[i]+"</h5>").appendTo('#description-pattern');
+            }
             $('.prod-price').html("Price: "+ products[0].price +"€");
             $('.prod-code').html("Product code: MYEU"+products[0].id);
             productId = products[0].id;

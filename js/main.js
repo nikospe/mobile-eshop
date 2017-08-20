@@ -193,7 +193,7 @@ if (screen.width < 960) {
 
 
 
-$(document).ready(function(){ 
+$(document).ready(function() {
     if (window.innerWidth < 960 ) {
         $('#product-info').removeClass('stores-left'); 
         $('#product-info').attr('width', '100%');
@@ -202,6 +202,7 @@ $(document).ready(function(){
         $('.row').removeClass('marg-left'); 
         $('.rate-left').removeClass('rate-left');
         $('#responsive-image').show();
-        $('.row').removeClass('marg-left');        
+        $('.row').removeClass('marg-left');  
+        $('.descript').removeClass('descript');      
     }
 });
