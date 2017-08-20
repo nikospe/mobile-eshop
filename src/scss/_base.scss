@@ -7,14 +7,19 @@ html, body {
 .row {
   margin-top: 15px;
 }
-
+#logo-icon {
+  max-height: 40px;
+  margin-bottom: 25px;
+}
 #search_group_index {
-    margin-top: 180;
+    margin: auto;
+    width: 60%
 }
 
 #search-product-index {
   background: none;
-  border: 1px solid darkorange;
+  border: 1px solid #d2a063;
+  border-radius: 15px;
   color: cornsilk;
   &:hover, &:focus {
     border: 1px solid cornsilk;
@@ -35,6 +40,7 @@ main.main-container {
 .back-img {
   background: url('../img/mobile.jpg') no-repeat center center;
   background-size: cover;
+  height: 60%;
   padding-bottom: 8%;
   padding-top: 85px;
   text-align: center;
@@ -79,7 +85,7 @@ main.main-container {
       margin: auto;
       left: 0;
     }
-    .products-row, .row-fix-bottom {
+    .products-row {
       margin-bottom: 0;
       margin-right: -15px;
       margin-left: -15px;

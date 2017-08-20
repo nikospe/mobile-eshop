@@ -181,6 +181,7 @@ $(document).ready(function() {
         $('#rating-div').removeClass('stores-left');
         $('#responsive-image').show();
         $('.row').removeClass('marg-left');  
-        $('.descript').removeClass('descript');      
+        $('.descript').removeClass('descript'); 
+        $('.search-inside-button').css('margin-left', '-12%' );     
     }
 });

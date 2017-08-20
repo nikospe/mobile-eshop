@@ -40,7 +40,7 @@ if (screen.width > 1000) {
         var element = $('.profile');
         if ( $(document).scrollTop() > 128 ) {
             element.removeClass('absolute'); 
-            var elemTop2 = $('.footer-header').offset().top - 145;
+            var elemTop2 = $('.footer').offset().top - 250;
             var height = $('.profile').height();
             var width = $('.profile').width();
             var temp = elemTop2 - height -50;
@@ -134,7 +134,7 @@ else if ( !('' in urlParams) ) {
             $('.for-display').hide();                
             $('dynamically').show();                      
             for ( item of products ){                        
-                $("<div class='row row-fix-bottom grey-background shadow-3 products-row'>"
+                $("<div class='row grey-background shadow-3 products-row'>"
                 +"<div class='col-sm-3 col-md-3'>"
                 +"<img src='"+item.image+"' class='results-image'>"
                 +"</div>"
