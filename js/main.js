@@ -201,6 +201,6 @@ $(document).ready(function(){
         $('#product-info').attr('left', 'auto');        
         $('.row').removeClass('marg-left'); 
         $('.rate-left').removeClass('rate-left');
-        $('#responsive-image').show();       
+        $('#responsive-image').show();  
     }
 });
