@@ -80,10 +80,6 @@
 .stores-left {
   left : 28%;
 }
-.rate-left {
-  width: 64%;
-  left: 31%;
-}
 
 #rate-title {
   margin-top: 5px;
@@ -121,12 +117,22 @@
 .titles {
   color: $main-blue;
 }
+#mobile-stats {
+  border: 1px solid #bdbdbd;
+  border-radius: 20px;
+  width: 100%;
+  margin: auto;
+  margin-top: 5px;
+  padding-bottom: 7px;
+
+}
 #description-pattern {
   background-color: #f1f1f1;
-  margin-top: 20px;
-  margin-bottom:  25px;
   padding: 5px;
   border: 1px solid lightgrey;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .descript {
   left: 28%;

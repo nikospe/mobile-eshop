@@ -22,7 +22,7 @@
     <dynamically class="dynamically-div">
     </dynamically>
     <div class="row row-fix-bottom no-display">
-        <div class="col-md-12 white-background descript-stores text-center">
+        <div class="col-md-12 white-background text-center">
             <span><img src="img/no-result.png" style="width:90px; height:90px;"></span>
             <h3>No results for
                 <p id="prod-tit"></p>
@@ -47,7 +47,7 @@
                 <div class="stable-rating">
                 </div>
             </div>
-            <div id="product-info" class="col-md-8 col-md-12 descript-stores white-background stores stores-left shadow-1">
+            <div id="product-info" class="col-md-8 col-sm-12 white-background shadow-1 stores-left">
                 <h3 id="product-title" class="titles"></h3>
                 <h6>Category: <span id="product-type" class="addresses"></span></h6>
                 <h4 id="product-description"></h4>
@@ -60,70 +60,69 @@
                             <img class="product-img" src="" align="middle" id="responsive-img">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="cl-md-12 col-sm-12">
-                            <h3 class="prod-price"></h3>
+                    <div id="mobile-stats">
+                        <div class="row">
+                            <div class="cl-md-12 col-sm-12">
+                                <h3 class="prod-price"></h3>
+                            </div>
                         </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">                                
+                                <h3 class="inlineClass">Availability: </h3>
+                                <h3 class="inlineClass availability availability-color"></h3>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <h3 class="inlineClass">Warranty: </h3>
+                                <h3 class="inlineClass warranty titles"></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <h3 class="inlineClass">Select color: </h3>
+                                <select class="color-selector inlineClass">
+                                    <option value="white">White</option>
+                                    <option value="black">Black</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="gold">Gold</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-12">                        
+                                <h3 class="inlineClass">Quantity: </h3>
+                                <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
+                            </div>
+                        </div>               
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <h5 class="prod-code titles"></h5>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <h3 class="inlineClass">Availability: </h3>
-                            <h3 class="inlineClass availability availability-color"></h3>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <h3 class="inlineClass">Warranty: </h3>
-                            <h3 class="inlineClass warranty titles"></h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <h3 class="inlineClass">Select color: </h3>
-                            <select class="color-selector inlineClass">
-                                <option value="white">White</option>
-                                <option value="black">Black</option>
-                                <option value="pink">Pink</option>
-                                <option value="gold">Gold</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 col-sm-12">                        
-                            <h3 class="inlineClass">Quantity: </h3>
-                            <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
-                        </div>
-                    </div>               
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <h5 class="prod-code titles"></h5>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
+                        <div class="col-md-12 col-sm-12">
+                            <div id="description-pattern">
+                                <h3 class="titles">Description:</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row marg-left matg-10">
-            <div class="col-md-8 col-sm-12 white-background shadow-1 descript">
-                <div id="description-pattern">
-                    <h3 class="titles">Description:</h3>
+        <div class="row marg-left rating-row">
+            <div class="col-md-8 col-sm-12 white-background shadow-1 stores-left" id="rating-div">
+                <h4 class="submain-color">Rate this product!</h4>
+                <form id="productRate">
+                    <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
+                    <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
+                    <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+                    <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
+                </form>
+                <div id="product-comments-list">
                 </div>
-            </div>
-        </div>
-        <dyn-stores class="dyn_stores marg-10">
-        </dyn-stores>
-        <div class="fix-row">
-            <div class="row .marg-left marg-10 rating-row">
-                <div class="col-md-8 white-background rate-left" id="rating-div">
-                    <h4 class="submain-color">Rate this product!</h4>
-                    <form id="productRate">
-                        <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
-                        <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
-                        <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
-                        <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
-                    </form>
-                    <div id="product-comments-list">
-                    </div>
-                    <div id="product-ratings-list">
-                    </div>
+                <div id="product-ratings-list">
                 </div>
             </div>
         </div>
