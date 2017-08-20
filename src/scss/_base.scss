@@ -31,9 +31,6 @@ main.main-container {
 .row-fix-bottom {
  margin-bottom: 55px; 
 }
-.profile-bottom {
-  margin-bottom: 7px;
-}
 
 .back-img {
   background: url('../img/mobile.jpg') no-repeat center center;
@@ -78,9 +75,14 @@ main.main-container {
         width: auto;
     }
     #myModal, #myModal2 {
-      width: 50%;
+      width: 70%;
       margin: auto;
       left: 0;
+    }
+    .products-row, .row-fix-bottom {
+      margin-bottom: 0;
+      margin-right: -15px;
+      margin-left: -15px;
     }
 }
 .myModals-size {
@@ -187,7 +189,7 @@ hr {
   }
 }
 .box-size {
-  height: 500px;
+  height: 400px;
 }
 
 .box-background {

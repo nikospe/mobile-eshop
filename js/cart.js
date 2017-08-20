@@ -20,8 +20,7 @@ app.component('bestproducts', {
                 <img src"" class="prod-image">
                 <a href=""><h4 class="prod-name capitals titles"></h4></a>
                 <h5 class="prod-avg"></h5>
-                <h5 class="prod-price"></h5>
-                <button class="btn btn-info add-cart-button" ng-click="$ctrl.addToCart($event)">Add to cart</button>
+                <h5 class="prod-price"></h5>                
             </div>`,
     controller: Bestproducts
 });

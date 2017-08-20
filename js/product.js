@@ -122,13 +122,20 @@ else if ( !('' in urlParams) ) {
             $('.for-display').hide();                
             $('dynamically').show();                      
             for ( item of products ){                        
-                $("<div class='row row-fix-bottom products-row'>"
-                +"<div class='col-md-12 grey-background products'><h4>"
-                +"Product: <a class='title' href='product.html?id="+item.id
-                +"'>"+item.name+"</a></h4><h4 class='submain-color'><span class='black'>Category: </span>"+item.type
-                +"</h4><h4 class='submain-color'><span class='black'>Description: </span>"+item.description
-                +"</h4></div></div>").appendTo("dynamically");  
-            }                
+                $("<div class='row row-fix-bottom grey-background shadow-3 products-row'>"
+                +"<div class='col-sm-3 col-md-3'>"
+                +"<img src='"+item.image+"' class='results-image'>"
+                +"</div>"
+                +"<div class='col-sm-9 col-md-9 border-left'>"
+                +"<h4>Product: <a class='title' href='product.html?id="+item.id+"'>"+item.name+"</a></h4>"                
+                +"<h4 class='submain-color'><span class='black'>Category: </span>"+item.type+"</h4>"
+                +"<h4 class='submain-color'><span class='black'>Description: </span>"+item.description+"</h4>"
+                +"</div></div>").appendTo("dynamically");  
+                if (window.innerWidth < 960 ) {
+                    $('.grey-background').removeClass('products-row');
+                }
+            } 
+
         }
         productRating();
         ShowProdRatings();
