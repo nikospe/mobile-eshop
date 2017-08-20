@@ -70,6 +70,8 @@ if ( urlParams.hasOwnProperty('id') ) {
                 $('#product-image').attr("src", ""+product.image+"");
                 $('#responsive-img').attr("src", ""+product.image+"");
                 $('#prod-title').html(product.name);
+                $('.availability').html(product.availability);
+                $('.warranty').html(product.warranty);
                 $('#product-title').html(product.name);
                 $('#product-type').html(product.type);
                 $('#product-description').html(product.description);
@@ -109,6 +111,8 @@ else if ( !('' in urlParams) ) {
             $('#product-image').attr("src", ""+products[0].image+"");
             $('#responsive-img').attr("src", ""+products[0].image+"");
             $('#prod-title').html(products[0].name);
+            $('.availability').html(products[0].availability);
+            $('.warranty').html(products[0].warranty);
             $('#product-title').html(products[0].name);
             $('#product-type').html(products[0].type);
             $('#product-description').html(products[0].description);
