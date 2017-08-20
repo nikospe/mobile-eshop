@@ -1,8 +1,5 @@
 <div class="row my_header white-background shadow">
-    <div class="col-sm-2 col-md-2">
-        <strong><h1 class="header_title">Products</h1></strong>
-    </div>
-    <div class="col-sm-10 col-md-10 header_search">
+    <div class="col-sm-12 col-md-12 header_search">
         <form action="product.html" class="form-group search-form-product" method="GET">
             <p class="search-alert">Your search must contain at least 2 characters</p>
             <div class="input-group" id="search_group">
@@ -50,7 +47,7 @@
                 <div class="stable-rating">
                 </div>
             </div>
-            <div id="product-info" class="col-md-8 descript-stores white-background stores stores-left shadow-1 profile-bottom">
+            <div id="product-info" class="col-md-8 col-md-12 descript-stores white-background stores stores-left shadow-1 profile-bottom">
                 <h3 id="product-title" class="titles"></h3>
                 <h6>Category: <span id="product-type" class="addresses"></span></h6>
                 <h4 id="product-description"></h4>
@@ -58,6 +55,11 @@
                 </div>   
                 <hr>
                 <div class="product-price text-center">
+                    <div class="row" id="responsive-image">
+                        <div class="col-md-12 col-sm-12">
+                            <img class="product-img" src="" align="middle" id="responsive-img">
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="cl-md-12 col-sm-12">
                             <h3 class="prod-price"></h3>
@@ -95,7 +97,7 @@
         <div class="row" id="rating-row"></div>
         <div class="fix-row">
             <div class="row .marg-left marg-10 rating-row">
-                <div class="col-md-8 white-background rate-left">
+                <div class="col-md-8 white-background rate-left" id="rating-div">
                     <h4 class="submain-color">Rate this product!</h4>
                     <form id="productRate">
                         <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>

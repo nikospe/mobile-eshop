@@ -68,6 +68,7 @@ if ( urlParams.hasOwnProperty('id') ) {
                 $('.for-display').show();
                 var product = data.product;
                 $('#product-image').attr("src", ""+product.image+"");
+                $('#responsive-img').attr("src", ""+product.image+"");
                 $('#prod-title').html(product.name);
                 $('#product-title').html(product.name);
                 $('#product-type').html(product.type);
@@ -100,17 +101,19 @@ else if ( !('' in urlParams) ) {
             $('#prod-tit').html(mdata.name);                
             return;
         }
-
         if ( products.length == 1 ) {
             $('.no-display').hide();
             $('.dynamically-row').hide();
             $('.empty-page').hide();
             $('.for-display').show(); 
             $('#product-image').attr("src", ""+products[0].image+"");
+            $('#responsive-img').attr("src", ""+products[0].image+"");
             $('#prod-title').html(products[0].name);
             $('#product-title').html(products[0].name);
             $('#product-type').html(products[0].type);
             $('#product-description').html(products[0].description);
+            $('.prod-price').html("Price: "+ products[0].price +"€");
+            $('.prod-code').html("Product code: MYEU"+products[0].id);
             productId = products[0].id;
             $('#element').attr("placeholder", products[0].name);
         }

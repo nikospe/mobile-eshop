@@ -182,7 +182,6 @@ if (screen.width < 960) {
     userData.width('auto');
     userData.css("left", "auto");
     prodRating.removeClass('rate-left');
-    inputRate.width('auto');
     navBar.removeClass('in');
     $('.rate_pr_but').removeClass('rate_pr_but');
     $('.add_st_but').removeClass('add_st_but');
@@ -192,32 +191,16 @@ if (screen.width < 960) {
     $('.fix-str-left').removeClass('marg-left');
 }
 
+
+
 $(document).ready(function(){ 
-    var element = $('.test');
-    var boxes = $('.box-left');
-    var userActivity = $('#users-info');
-    var userData = $('#users-activity');
-    var prodRating = $('.rate-left');
-    var inputRate = $('#rate-title');
-    var prodStores = $('.marg-left');
-    var stores_display = $('.descript-stores');
-    var navBar = $('.in');
-    if (screen.width < 960) {
-        boxes.removeClass('box-left');
-        element.removeClass('r-inline');
-        userActivity.removeClass('fixed-pos');
-        userActivity.width('auto');
-        userActivity.css("left", "auto");
-        userData.width('auto');
-        userData.css("left", "auto");
-        prodRating.removeClass('rate-left');
-        inputRate.width('auto');
-        navBar.removeClass('in');
-        $('.rate_pr_but').removeClass('rate_pr_but');
-        $('.add_st_but').removeClass('add_st_but');
-        $('.profile-buttons').removeClass('profile-buttons');
-        $('.profile-buttons-serv').removeClass('profile-buttons-serv');
-        $('.add_se_but').removeClass('add_se_but');
-        $('.fix-str-left').removeClass('marg-left');
+    if (window.innerWidth < 960 ) {
+        $('#product-info').removeClass('stores-left'); 
+        $('#product-info').attr('width', '100%');
+        $('#product-info').attr('margin', 'auto');
+        $('#product-info').attr('left', 'auto');        
+        $('.row').removeClass('marg-left'); 
+        $('.rate-left').removeClass('rate-left');
+        $('#responsive-image').show();       
     }
 });
