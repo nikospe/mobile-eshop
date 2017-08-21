@@ -1,62 +1,53 @@
-nav {
-  ul {
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
-    li.subNav {
-      ul {                                          
-        display: none;
-      }
-      &:hover ul {
-        display: block;
-      }
-    }
-  }
-  a {
-    font-weight: 700;
-    padding: 12px 8px;
-  }
-  &.navbar-fixed-top {
-    border: 0;
-  }
-  &.navbar-inverse {
+.nav-bar {
     background: #0e2426;
-  }
-}
-.navbar-inverse .navbar-nav > .active > a {
-  background: $main-orange;
-  text-shadow: 0 0 4px $main-color;
-  &:hover {
-    background: rgba(167, 81, 11, 0.9);
-    text-shadow: 0 0 4px #0e2426;
-  }
-}
-.logo {
-  max-height: 50px;
-  display: inline;
-}
-#anthrwpaki {
-  max-height: 50px; 
-}
-.nav>li {
-  &.nav-enterprise {
-    display: none;
-  }
-  &.nav-logout {
-    display: none;
-  } 
+    top: 0;
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 7;
+    min-width: 1024px;
+    left: 0;
 }
 
+.searchWrap {
+    float: left;
+    margin-right: .76336%;
+    left: 0;
+    padding-top: 15px;
+}
+.logoWrap {
+    float: left;
+    margin-right: .76336%;
+    padding-top: 15px;
+    padding-left: 10%;
+}
+.accountWrap {
+    float: right;
+    right: 0;
+    margin-right: 0;
+    padding-top: 15px;
+}
+#logo-image {
+  padding-top: 5px;
+  float: left;
+}
+#logo-ttl {
+  float: left;
+}
 #nav-cart-img {
-  max-height: 18px;
+  max-height: 40px;
 }
 
-#nav-cart {
+#anthrwpaki {
+  float: right;
+  max-height: 40px; 
+}
+#wrap-logout {
+  display: none;
+} 
+#wrap-cart {
+  float: right;  
   &:hover {
     color: white;
   }
-}
-
-#logo-cart {
-  max-height: 100px;
 }

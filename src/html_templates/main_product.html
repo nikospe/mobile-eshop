@@ -1,132 +1,112 @@
-<div class="row my_header white-background shadow">
-    <div class="col-sm-12 col-md-12 header_search">
-        <form action="product.html" class="form-group search-form-product" method="GET">
-            <p class="search-alert">Your search must contain at least 2 characters</p>
-            <div class="input-group" id="search_group">
-                <input type="text" autocomplete="off" class="form-control search-label search-product-page search-product" 
-                placeholder="Search for Product" name="search-product">
-                <ul class="dropdown-menu dropdown-menu-index" id="product-search-box"></ul>
-                <ul class="dropdown-menu dropdown-menu-index" id="product-search-box-empty">
-                    <li class="dropdown-item dropdown-item-insert">
-                        <span class="muted-text">No results found. </span>
-                    </li>
-                </ul>
-                <div class="input-group-btn">
-                    <button class="btn search_buttons search-product-page" value="Submit" type="submit"><i class="glyphicon glyphicon-search"></i>&nbsp;Search</button>
-                </div>
+<div class="container">
+    <main class="main-container relative">
+        <dynamically class="dynamically-div">
+        </dynamically>
+        <div class="row row-fix-bottom no-display">
+            <div class="col-md-12 white-background text-center">
+                <span><img src="img/no-result.png" style="width:90px; height:90px;"></span>
+                <h3>No results for
+                    <p id="prod-tit"></p>
+                </h3>
             </div>
-        </form>
-    </div>
-</div>
-<main class="main-container relative">
-    <dynamically class="dynamically-div">
-    </dynamically>
-    <div class="row row-fix-bottom no-display">
-        <div class="col-md-12 white-background text-center">
-            <span><img src="img/no-result.png" style="width:90px; height:90px;"></span>
-            <h3>No results for
-                <p id="prod-tit"></p>
-            </h3>
         </div>
-    </div>
-    <div class="empty-page">
-        <div class="row">
-            <h4 class="addresses text-center">
-                <i class='glyphicon glyphicon-star-semi'></i> Your best products
-                <i class='glyphicon glyphicon-star-semi'></i>
-            </h4>
-            <bestproducts></bestproducts>
-        </div>
-    </div>
-    <div class="for-display">
-        <div class="row marg-left">
-            <div class="col-md-3 profile shadow-3 visible-lg-block absolute" id="profile">
-                <img class="product-img" src="" align="middle" id="product-image">
-                <h4 id="prod-title"></h4> 
-                <hr>                
-                <div class="stable-rating">
-                </div>
+        <div class="empty-page">
+            <div class="row">
+                <h4 class="addresses text-center">
+                    <i class='glyphicon glyphicon-star-semi'></i> Your best products
+                    <i class='glyphicon glyphicon-star-semi'></i>
+                </h4>
+                <bestproducts></bestproducts>
             </div>
-            <div id="product-info" class="col-md-8 col-sm-12 white-background shadow-1 stores-left">
-                <h3 id="product-title" class="titles"></h3>
-                <h6>Category: <span id="product-type" class="addresses"></span></h6>
-                <h4 id="product-description"></h4>
-                <div class="stable-rating">
-                </div>   
-                <hr>
-                <div class="product-price text-center">
-                    <div class="row" id="responsive-image">
-                        <div class="col-md-12 col-sm-12">
-                            <img class="product-img" src="" align="middle" id="responsive-img">
-                        </div>
+        </div>
+        <div class="for-display">
+            <div class="row marg-left">
+                <div class="col-md-3 profile shadow-3 visible-lg-block absolute" id="profile">
+                    <img class="product-img" src="" align="middle" id="product-image">
+                    <h4 id="prod-title"></h4> 
+                    <hr>                
+                    <div class="stable-rating">
                     </div>
-                    <div id="mobile-stats">
-                        <div class="row">
-                            <div class="cl-md-12 col-sm-12">
-                                <h3 class="prod-price"></h3>
+                </div>
+                <div id="product-info" class="col-md-8 col-sm-12 white-background shadow-1 stores-left">
+                    <h3 id="product-title" class="titles"></h3>
+                    <h6>Category: <span id="product-type" class="addresses"></span></h6>
+                    <h4 id="product-description"></h4>
+                    <div class="stable-rating">
+                    </div>   
+                    <hr>
+                    <div class="product-price text-center">
+                        <div class="row" id="responsive-image">
+                            <div class="col-md-12 col-sm-12">
+                                <img class="product-img" src="" align="middle" id="responsive-img">
                             </div>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">                                
-                                <h3 class="inlineClass">Availability: </h3>
-                                <h3 class="inlineClass availability availability-color"></h3>
+                        <div id="mobile-stats">
+                            <div class="row">
+                                <div class="cl-md-12 col-sm-12">
+                                    <h3 class="prod-price"></h3>
+                                </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
-                                <h3 class="inlineClass">Warranty: </h3>
-                                <h3 class="inlineClass warranty titles"></h3>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">                                
+                                    <h3 class="inlineClass">Availability: </h3>
+                                    <h3 class="inlineClass availability availability-color"></h3>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h3 class="inlineClass">Warranty: </h3>
+                                    <h3 class="inlineClass warranty titles"></h3>
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <h3 class="inlineClass">Select color: </h3>
+                                    <select class="color-selector inlineClass">
+                                        <option value="white">White</option>
+                                        <option value="black">Black</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="gold">Gold</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-sm-12">                        
+                                    <h3 class="inlineClass">Quantity: </h3>
+                                    <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
+                                </div>
+                            </div>               
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <h5 class="prod-code titles"></h5>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>                        
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <h3 class="inlineClass">Select color: </h3>
-                                <select class="color-selector inlineClass">
-                                    <option value="white">White</option>
-                                    <option value="black">Black</option>
-                                    <option value="pink">Pink</option>
-                                    <option value="gold">Gold</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-12">                        
-                                <h3 class="inlineClass">Quantity: </h3>
-                                <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
-                            </div>
-                        </div>               
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <h5 class="prod-code titles"></h5>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div id="description-pattern">
-                                <h3 class="titles">Description:</h3>
+                            <div class="col-md-12 col-sm-12">
+                                <div id="description-pattern">
+                                    <h3 class="titles">Description:</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row marg-left rating-row">
-            <div class="col-md-8 col-sm-12 white-background shadow-1 stores-left" id="rating-div">
-                <h4 class="submain-color">Rate this product!</h4>
-                <form id="productRate">
-                    <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
-                    <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
-                    <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
-                    <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
-                </form>
-                <div id="product-comments-list">
-                </div>
-                <div id="product-ratings-list">
+            <div class="row marg-left rating-row">
+                <div class="col-md-8 col-sm-12 white-background shadow-1 stores-left" id="rating-div">
+                    <h4 class="submain-color">Rate this product!</h4>
+                    <form id="productRate">
+                        <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
+                        <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
+                        <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+                        <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
+                    </form>
+                    <div id="product-comments-list">
+                    </div>
+                    <div id="product-ratings-list">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-
+    </main>
 </div>

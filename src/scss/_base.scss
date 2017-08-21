@@ -3,9 +3,8 @@ html, body {
   width: 100%; 
   position: relative;
 }
-
 .row {
-  margin-top: 15px;
+  margin-bottom: 7px;
 }
 #logo-icon {
   max-height: 40px;
@@ -21,9 +20,22 @@ html, body {
   border: 1px solid #d2a063;
   border-radius: 15px;
   color: cornsilk;
+  height: 50px;
+  font-size: xx-large;
   &:hover, &:focus {
     border: 1px solid cornsilk;
     box-shadow: 0 0 10px 1px rgba(205,205,205,0.3);
+  }
+}
+#search-product-nav {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  height: 50px;
+  font-size: x-large;
+  &:hover, &:focus {
+    border-bottom: 1px solid #d2a063;
   }
 }
 .prod-image {
@@ -31,7 +43,7 @@ html, body {
 }
 
 main.main-container {
-  margin-top: 45px;
+  margin-top: 115px;
 }
 .row-fix-bottom {
  margin-bottom: 55px; 
@@ -226,5 +238,6 @@ hr {
 .color-selector {
   width: 80px;
   height: 30px;
+  text-align: center;
   border: 1px solid cornflowerblue;
 }

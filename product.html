@@ -16,274 +16,194 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>    
-    <div class="container">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul class="navbar-nav navbar-left" id="navbar">
-                    <li class="logo">
-                        <a class="navbar-brand" href="index.html"><img src="img/mob.png" style="max-height:25px;"></a>
-                        <a class="navbar-brand" href="index.html" id="a">YourMobiles</a>                                
-                    </li>
-                </ul>                                                
-            </div>  
-            <div class="collapse in navbar-colapse navbar-ex1-collapse">         
-                <ul class="nav navbar-nav navbar-right" id="navbar1">                        
-                    <li class=""><a href="index.html">Home</a></li>                    
-                    <li class="active"><a href="product.html">Products</a></li>
-                    <li class='subNav '><a href='aboutus.html'>About us</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="commun.html">More Info</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-enterprise @gulp@enterprise"><a href="#" class="capitals"></a></li>  
-                    <li class="subNav " id="anthrwpaki"><a><img src="img/Male_Avatar.png" style="max-height:20px;"></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">Sign in</a></li>
-                            <li><a href="signup.html">Sign up</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-logout"><a href="#" data-toggle="modal" data-target="#myModal2">Logout!</a></li>                     
-                    <li class="subNav @gulp@cart" id="nav-cart">
-                        <a href="#" data-toggle="modal" data-target="#cartModal">
-                            <img src="img/cartico.png" id="nav-cart-img">
-                            Cart
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>   
-    <div class="row my_header white-background shadow">
-    <div class="col-sm-12 col-md-12 header_search">
-        <form action="product.html" class="form-group search-form-product" method="GET">
-            <p class="search-alert">Your search must contain at least 2 characters</p>
-            <div class="input-group" id="search_group">
-                <input type="text" autocomplete="off" class="form-control search-label search-product-page search-product" 
-                placeholder="Search for Product" name="search-product">
-                <ul class="dropdown-menu dropdown-menu-index" id="product-search-box"></ul>
+    <div class="nav-bar shadow-3">    
+    <div class="searchWrap col-md-4 col-sm-4 col-xs-4 text-center">
+        <div id="nav-search">
+        <form class="form-group search-form-product visible-lg-block" action="product.html" method="GET">
+            <div class="input-group">
+                <input type="text" autocomplete="off" class="form-control search-label search-product" name="search-product"
+                    id="search-product-nav">  
                 <ul class="dropdown-menu dropdown-menu-index" id="product-search-box-empty">
                     <li class="dropdown-item dropdown-item-insert">
                         <span class="muted-text">No results found. </span>
                     </li>
                 </ul>
-                <div class="input-group-btn">
-                    <button class="btn search_buttons search-product-page" value="Submit" type="submit"><i class="glyphicon glyphicon-search"></i>&nbsp;Search</button>
+                <div class="input-group-btn search-inside-button">
+                    <button class="btn btn-success search_buttons" id="search_button_nav" title="Search" value="Submit" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
                 </div>
             </div>
         </form>
+        </div>
+    </div>
+    <div class="logoWrap col-md-4 col-sm-4 col-xs-4 text-center">
+        <a href="index.html" id="logo-image"><img src="img/mob.png" style="max-height:40px;"></a>
+        <a href="index.html" id="logo-ttl"><h2>YourMobiles</h2></a>                                
+    </div>
+    <div class="accountWrap col-md-3 col-sm-3 col-xs-3 text-center">
+        <div class="acountContainer">
+            <div id="wrap-logout">
+                <a href="#" data-toggle="modal" data-target="#myModal2">Logout!</a>
+            </div>  
+            <div id="anthrwpaki">
+                <a href="#" data-toggle="modal" data-target="#myModal">
+                    <img src="img/Male_Avatar.png" style="max-height:40px;">
+                </a>
+            </div>                                   
+            <div id="wrap-cart">
+                <a href="#" data-toggle="modal" data-target="#cartModal">
+                    <img src="img/cartico.png" id="nav-cart-img">
+                </a>
+            </div>
+        </div>
+    </div>                                                
+</div>   
+    <div class="container">
+    <main class="main-container relative">
+        <dynamically class="dynamically-div">
+        </dynamically>
+        <div class="row row-fix-bottom no-display">
+            <div class="col-md-12 white-background text-center">
+                <span><img src="img/no-result.png" style="width:90px; height:90px;"></span>
+                <h3>No results for
+                    <p id="prod-tit"></p>
+                </h3>
+            </div>
+        </div>
+        <div class="empty-page">
+            <div class="row">
+                <h4 class="addresses text-center">
+                    <i class='glyphicon glyphicon-star-semi'></i> Your best products
+                    <i class='glyphicon glyphicon-star-semi'></i>
+                </h4>
+                <bestproducts></bestproducts>
+            </div>
+        </div>
+        <div class="for-display">
+            <div class="row marg-left">
+                <div class="col-md-3 profile shadow-3 visible-lg-block absolute" id="profile">
+                    <img class="product-img" src="" align="middle" id="product-image">
+                    <h4 id="prod-title"></h4> 
+                    <hr>                
+                    <div class="stable-rating">
+                    </div>
+                </div>
+                <div id="product-info" class="col-md-8 col-sm-12 white-background shadow-1 stores-left">
+                    <h3 id="product-title" class="titles"></h3>
+                    <h6>Category: <span id="product-type" class="addresses"></span></h6>
+                    <h4 id="product-description"></h4>
+                    <div class="stable-rating">
+                    </div>   
+                    <hr>
+                    <div class="product-price text-center">
+                        <div class="row" id="responsive-image">
+                            <div class="col-md-12 col-sm-12">
+                                <img class="product-img" src="" align="middle" id="responsive-img">
+                            </div>
+                        </div>
+                        <div id="mobile-stats">
+                            <div class="row">
+                                <div class="cl-md-12 col-sm-12">
+                                    <h3 class="prod-price"></h3>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">                                
+                                    <h3 class="inlineClass">Availability: </h3>
+                                    <h3 class="inlineClass availability availability-color"></h3>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h3 class="inlineClass">Warranty: </h3>
+                                    <h3 class="inlineClass warranty titles"></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <h3 class="inlineClass">Select color: </h3>
+                                    <select class="color-selector inlineClass">
+                                        <option value="white">White</option>
+                                        <option value="black">Black</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="gold">Gold</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-sm-12">                        
+                                    <h3 class="inlineClass">Quantity: </h3>
+                                    <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
+                                </div>
+                            </div>               
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <h5 class="prod-code titles"></h5>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div id="description-pattern">
+                                    <h3 class="titles">Description:</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row marg-left rating-row">
+                <div class="col-md-8 col-sm-12 white-background shadow-1 stores-left" id="rating-div">
+                    <h4 class="submain-color">Rate this product!</h4>
+                    <form id="productRate">
+                        <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
+                        <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
+                        <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+                        <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
+                    </form>
+                    <div id="product-comments-list">
+                    </div>
+                    <div id="product-ratings-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+    <div class="footer">
+    <div class="row footer-row">
+        <div class="col-md-4 col-sm-12"> 
+            <div class="copy">
+                <h4 class="b">Link with us</h4>
+                <a href="http://www.facebook.com"><img src="img/fb.png" style="width:35px; height:35px;"></a> | 
+                <a href="http://www.twitter.com"><img src="img/twitter.png" style="width:40px; height:40px;"></a> | 
+                <a href="http://www.instagram.com"><img src="img/instagram.png" style="max-width:35px; max-height:35px;"></a> | 
+                <a href="http://www.plus.google.com"><img src="img/google.png" style="width:35px; height:35px;"></a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="copy">
+                <h4 class="b">YouMobile apps</h4>
+                <a href="http://www.facebook.com"><img src="img/apple.png" style="width:40px; height:40px;"></a> | 
+                <a href="http://www.twitter.com"><img src="img/google-play.png" style="width:45px; height:45px;"></a> | 
+                <a href="http://www.instagram.com"><img src="img/microsoft.png" style="max-width:45px; max-height:45px;"></a> | 
+                <a href="http://www.plus.google.com"><img src="img/mozilla.ico" style="width:40px; height:40px;"></a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="copy">
+                <h4 class="b">Our company</h4>
+                <a href="aboutus.html" class="addresses">About us</a><br>
+                <a href="commun.html" class="addresses">Communication</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <span>© 2017 YourMobiles Α.Ε. All Rights and Lefts reserved. </span><a href="#" class="mblack">FAQ - Όροι χρήσης</a> | <a href="#" class="mblack">Cookies</a> | <a href="commun.html" class="mblack">Επικοινωνία</a>
     </div>
 </div>
-<main class="main-container relative">
-    <dynamically class="dynamically-div">
-    </dynamically>
-    <div class="row row-fix-bottom no-display">
-        <div class="col-md-12 white-background text-center">
-            <span><img src="img/no-result.png" style="width:90px; height:90px;"></span>
-            <h3>No results for
-                <p id="prod-tit"></p>
-            </h3>
-        </div>
-    </div>
-    <div class="empty-page">
-        <div class="row">
-            <h4 class="addresses text-center">
-                <i class='glyphicon glyphicon-star-semi'></i> Your best products
-                <i class='glyphicon glyphicon-star-semi'></i>
-            </h4>
-            <bestproducts></bestproducts>
-        </div>
-    </div>
-    <div class="for-display">
-        <div class="row marg-left">
-            <div class="col-md-3 profile shadow-3 visible-lg-block absolute" id="profile">
-                <img class="product-img" src="" align="middle" id="product-image">
-                <h4 id="prod-title"></h4> 
-                <hr>                
-                <div class="stable-rating">
-                </div>
-            </div>
-            <div id="product-info" class="col-md-8 col-sm-12 white-background shadow-1 stores-left">
-                <h3 id="product-title" class="titles"></h3>
-                <h6>Category: <span id="product-type" class="addresses"></span></h6>
-                <h4 id="product-description"></h4>
-                <div class="stable-rating">
-                </div>   
-                <hr>
-                <div class="product-price text-center">
-                    <div class="row" id="responsive-image">
-                        <div class="col-md-12 col-sm-12">
-                            <img class="product-img" src="" align="middle" id="responsive-img">
-                        </div>
-                    </div>
-                    <div id="mobile-stats">
-                        <div class="row">
-                            <div class="cl-md-12 col-sm-12">
-                                <h3 class="prod-price"></h3>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">                                
-                                <h3 class="inlineClass">Availability: </h3>
-                                <h3 class="inlineClass availability availability-color"></h3>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <h3 class="inlineClass">Warranty: </h3>
-                                <h3 class="inlineClass warranty titles"></h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <h3 class="inlineClass">Select color: </h3>
-                                <select class="color-selector inlineClass">
-                                    <option value="white">White</option>
-                                    <option value="black">Black</option>
-                                    <option value="pink">Pink</option>
-                                    <option value="gold">Gold</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-12">                        
-                                <h3 class="inlineClass">Quantity: </h3>
-                                <input class="inlineClass color-selector" type="text" value="1" style="max-width: 80px;"/>
-                            </div>
-                        </div>               
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <h5 class="prod-code titles"></h5>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <button class="btn btn-info add-cart-button" id="add-to-cart">Add to cart</button>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div id="description-pattern">
-                                <h3 class="titles">Description:</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row marg-left rating-row">
-            <div class="col-md-8 col-sm-12 white-background shadow-1 stores-left" id="rating-div">
-                <h4 class="submain-color">Rate this product!</h4>
-                <form id="productRate">
-                    <h4 id="leave-blank" style="display:none;">Title and rating must not be empty!</h4>
-                    <input name="rate-title" id="rate-title" placeholder="Give a description for yor rating!" type="text">
-                    <input name="rate-product" id="rate-product" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
-                    <button class="btn btn-success marg dis" value="Submit" type="submit" disabled>Rate!</button>
-                </form>
-                <div id="product-comments-list">
-                </div>
-                <div id="product-ratings-list">
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
 
-</div>
-    <!--<div class="footer-header">
-    <div class="content-lsu">
-        <div class="row footer-row">
-            <div class="col-md-4 col-sm-12">
-                <a id="footer-head" title="Home page PSRating" href="index.html">PSRating</a>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <span style="width:40px; height:40px; display:inline-block;">
-                    <img src="img/Store.png" style="width:inherit;">
-                </span>
-                <a class="footer-headers" title="Store List" href="stores.php">Find Store</a>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <span style="width:40px; height:40px; display:inline-block;">
-                    <img src="img/Mail.png" style="width:inherit;">
-                </span>
-                <a class="footer-headers" title="Sent Your Comments" href="javascript:;" data-toggle="modal" data-target="contact-us">Need help?</a> 
-            </div>
-        </div>
-    </div>
-</div>-->
-<div class="footer">
-    <!--<div class="content-footer">
-        <div class="row footer-row">
-            <div class="col-md-4 col-sm-12">
-                <h4 class="b">Categories</h4>
-                <div class="h-categories">
-                    <h6><a href="#" class="h6">Technology</a></h6>  
-                    <h6><a href="#" class="h6">Home</a></h6>
-                    <h6><a href="#" class="h6">Fashion</a></h6>
-                    <h6><a href="#" class="h6">Athletism - Hoby</a></h6>
-                    <h6><a href="#" class="h6">Auto - Moto</a></h6>
-                    <h6><a href="#" class="h6">Childrens</a></h6>
-                    <h6><a href="#" class="h6">Healt</a></h6>
-                    <h6><a href="#" class="h6">Beuty</a></h6>  
-                    <h6><a href="#" class="h6">Foods</a></h6>
-                    <h6><a href="#" class="h6">Drinks</a></h6>  
-                    <h6><a href="#" class="h6">Stores</a></h6> 
-                    <h6><a href="#" class="h6">Other Categories</a></h6> 
-                </div>              
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <h4 class="b">Co-Workers</h4>
-                <div class="h-categories">
-                    <h4>Are you a merchant?</h4>
-                    <h6><a href="#" class="h6">See how you can raise your<br>sells by our site.</a></h6>
-                    <h4 class="top">Are you a developer?</h4>
-                    <h6><a href="#" class="h6">Find whatever you need for the<br>interconnection with PSRating.</a></h6>
-                </div> 
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <h4 class="b">Company</h4>
-                <div class="h-categories">
-                    <h4>Blog @ PSRating</h4>
-                    <h6><a href="#" class="h6">Learn for the DNA of our company,<br>learn our team and descover our blog.</a></h6>
-                    <h4 class="top">Work @ PsRating</h4>
-                    <h6><a href="#" class="h6">Be a member of our team.<br>See all the open jobs.</a></h6>
-                </div> 
-            </div>
-        </div>-->
-        <div class="row footer-row">
-            <div class="col-md-4 col-sm-12"> 
-                <div class="copy">
-                    <h4 class="b">Link with us</h4>
-                    <a href="http://www.facebook.com"><img src="img/fb.png" style="width:35px; height:35px;"></a> | 
-                    <a href="http://www.twitter.com"><img src="img/twitter.png" style="width:40px; height:40px;"></a> | 
-                    <a href="http://www.instagram.com"><img src="img/instagram.png" style="max-width:35px; max-height:35px;"></a> | 
-                    <a href="http://www.plus.google.com"><img src="img/google.png" style="width:35px; height:35px;"></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="copy">
-                    <h4 class="b">YouMobile apps</h4>
-                    <a href="http://www.facebook.com"><img src="img/apple.png" style="width:40px; height:40px;"></a> | 
-                    <a href="http://www.twitter.com"><img src="img/google-play.png" style="width:45px; height:45px;"></a> | 
-                    <a href="http://www.instagram.com"><img src="img/microsoft.png" style="max-width:45px; max-height:45px;"></a> | 
-                    <a href="http://www.plus.google.com"><img src="img/mozilla.ico" style="width:40px; height:40px;"></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="copy">
-                    <h4 class="b">Our company</h4>
-                    <a href="aboutus.html" class="addresses">About us</a><br>
-                    <a href="commun.html" class="addresses">Communication</a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <span>© 2017 YourMobiles Α.Ε. All Rights and Lefts reserved. </span><a href="#" class="mblack">FAQ - Όροι χρήσης</a> | <a href="#" class="mblack">Cookies</a> | <a href="commun.html" class="mblack">Επικοινωνία</a>
-        </div>
-    </div>
-</div>
 <!-- Sign in Modal -->
 <div class="modal fade myModals-size" id="myModal" role="dialog">
     <div class="modal-dialog myModal-content">

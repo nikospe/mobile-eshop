@@ -69,7 +69,6 @@ $('#signin-form').submit(function (event) {
 });
 /**Function to destroy session and log out */
 function logout() {
-    var scroll = $(document).scrollTop();
     $.post('ajax/session_close.php', null, function (data) {
         if (data.status === 'ok') {
             window.location = 'index.html';
@@ -183,5 +182,10 @@ $(document).ready(function() {
         $('.row').removeClass('marg-left');  
         $('.descript').removeClass('descript'); 
         $('.search-inside-button').css('margin-left', '-12%' );     
+    }
+    if (window.location.href.includes('index')) {
+        $('#nav-search').hide();
+    } else {
+        $('#nav-search').show();
     }
 });
