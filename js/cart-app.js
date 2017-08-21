@@ -5,11 +5,6 @@ var cartProducts = [];
 class Bestproducts {
     constructor( ) {
     }
-
-    addToCart (el) {
-        alert("added!"+el.target.id);
-        
-    }
 }
 
 app.component('bestproducts', {
@@ -26,11 +21,14 @@ app.component('bestproducts', {
 });
 
 class Cart {
-    constructor( ) {
+    constructor() {
+    }
+    $onInit() {
+        this.cart = cartArray;
     }
 }
 app.component('cart', {
-  bindings: {        
+  bindings: {   
     },
     template: `<div class="modal fade" id="cartModal" role="dialog">
                     <div class="modal-dialog myModal-content">
@@ -47,6 +45,12 @@ app.component('cart', {
                                     </div>                    
                                 </div>
                             </div>
+                            <div ng-repeat="item in $ctrl.cart">
+                                {{item.name}}
+                                <span>{{item.color}}</span>
+                                <span>{{item.quantity}}</span>
+                                <span>{{item.price}}</span>
+                            </div>
                             <div class="modal-footer">
                                 <button class="btn btn-success butoons_row" type="submit" data-dismiss="modal">Continue shopping</button>
                                 <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Make order</button>
@@ -55,4 +59,21 @@ app.component('cart', {
                     </div>
                 </div>`,
     controller: Cart
+});
+
+class CartButton {
+    togglef () {
+        $('#cartModal').modal('show');
+    }
+}
+
+app.component('cartButton', {
+  bindings: {        
+    },
+    template: `<div id="wrap-cart">
+                    <a ng-click="$ctrl.togglef()" href="#">
+                        <img src="img/cartico.png" id="nav-cart-img">
+                    </a>
+                </div>`,
+    controller: [CartButton]
 });

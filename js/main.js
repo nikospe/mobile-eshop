@@ -2,7 +2,7 @@ var data = {
     products  : [],
 };
 var usr;
-var cartArray = [];
+var cartArray = JSON.parse(sessionStorage.getItem('cart') || '[]');
 
 /**Display username after login and logout link */
 $.post('ajax/get_session.php', null, function (data) {

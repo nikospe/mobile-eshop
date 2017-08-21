@@ -52,11 +52,7 @@
                         <img src="img/Male_Avatar.png" style="max-height:40px;">
                     </a>
                 </div>                                   
-                <div id="wrap-cart">
-                    <a href="#" data-toggle="modal" data-target="#cartModal">
-                        <img src="img/cartico.png" id="nav-cart-img">
-                    </a>
-                </div>
+                <cart-button></cart-button>
             </div>
         </div> 
     </div>                                               
@@ -156,19 +152,6 @@
                 </h4>
             </div>
         </div>  
-        <div class="row row-fix-bottom">
-            <div class="col-md-6 margintop">
-                <h4>
-                    This is our facilities.<br>
-                    you can visit us for a trip tour<br>
-                    to our buildings. It will be<br> 
-                    pleasure for us to guide you!
-                </h4>
-            </div>
-            <div class="col-md-6 visible-lg-block">
-                <img class="shadow" src="img/company.jpg">                        
-            </div>                                            
-        </div> 
     </main>
 </div>
 
@@ -264,73 +247,6 @@
 
 <!-- Cart Modal -->
 <cart></cart>
-<!-- end Modal -->
-
-<!-- Inset product Modal -->
-<div class="modal fade add-buttons" id="insert-product-modal" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content modals-background">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Add your product!</h3>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">                                                      
-                        <form class="form-group form-add-product">
-                            <div class="form-group row">
-                                <label for="example-text-input" class="col-xs-2 col-form-label">Product Category*</label>
-                                <div class="col-xs-10 field">                              
-                                    <select id="vertical_category_selector" class="styled" name="vertical_category_selector" tabindex="1">
-                                        <!-- Property Item types -->
-                                        <option value="" disabled selected>Select your option</option>                                        
-                                        <option value="technology"> Technology </option>
-                                        <option value="home"> Home </option>
-                                        <option value="fashion"> Fashion </option>
-                                        <option value="athletism-hoby"> Athletism - Hoby </option>
-                                        <option value="auto-moto"> Auto-Moto </option>
-                                        <option value="childrens"> Childrens </option>
-                                        <option value="health"> Health </option>
-                                        <option value="beuty"> Beuty </option>
-                                        <option value="foods"> Foods </option>   
-                                        <option value="drinks"> Drinks </option>                                        
-                                        <option value="other-categories"> Other Categories </option>                                     
-                                    </select>
-                                    <span class='names-check submain-color'>Please select a category!</span>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-text-input" class="col-xs-2 col-form-label">Product Name*</label>
-                                <div class="col-xs-10 frmSearch">
-                                    <input class="form-control" autocomplete="off" type="text" placeholder="Insert full product name" id="product_name" name="product_name">                        
-                                    <span class='names-check submain-color'>Name must have at least two characters!</span>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-text-input" class="col-xs-2 col-form-label">Product Description</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" autocomplete="off" type="text" placeholder="Write a small description for the product" id="description" name="description">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-text-input" class="col-xs-2 col-form-label">Product Image URL</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" autocomplete="off" type="text" placeholder="Paste the image url here" id="product_image" name="product_image">
-                                </div>
-                            </div>
-                            <h6>Fields with * are required fields!</h6>
-                            <div class="row butoons_row">
-                                <button class="btn btn-success" type="submit" value="Submit" style="margin-right: 25px">Submit</button>                               
-                                <button class="btn btn-warning" type="reset" value="Reset">Reset</button>
-                            </div>
-                        </form> 
-                    </div>                     
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- end Modal -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

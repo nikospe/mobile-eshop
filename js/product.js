@@ -38,24 +38,26 @@ function productRating() {
 //cart
 function addToCart (e) {
     var sdata = { 'id': e };
+    var found = false;
     $.post('ajax/get_product.php', sdata, function (data) {
         if (data.product) {
             var color = document.querySelector("#color-selected").value;
-            var quantity = document.querySelector("#quantity-selected").value;
-            var obj = { "name": data.product.name, "color": color, "quantity": quantity, "price": data.product.price };
-            cartArray.push(obj);
-            if ( sessionStorage.getItem(data.product.id) === null ) {
-                sessionStorage.setItem(data.product.id, JSON.stringify(cartArray));
-                alert('Product added to cart!');
-            } else {
-                obj = JSON.parse(sessionStorage.getItem(data.product.id));
-                obj[0].quantity = (parseInt(obj[0].quantity) + parseInt(quantity)).toString();
-                sessionStorage.setItem(data.product.id, JSON.stringify(obj));
-                alert('Product added to cart!');
+            var quantity = parseInt(document.querySelector("#quantity-selected").value);
+            for (const item of cartArray) {
+                if (item.name == data.product.name) {
+                    item.quantity += quantity;
+                    found = true;
+                }
             }
+            if (!found) {
+                var obj = { "name": data.product.name, "color": color, "quantity": quantity, "price": data.product.price };
+                cartArray.push(obj);
+            }
+            sessionStorage.setItem('cart', JSON.stringify(cartArray));
         }
     }, 'json');
 }
+
 
 if (screen.width > 1000) {
     $(window).scroll( function() {
@@ -150,6 +152,7 @@ else if ( !('' in urlParams) ) {
             $('.prod-price').html("Price: "+ products[0].price +"€");
             $('.prod-code').html("Product code: MYEU"+products[0].id);
             productId = products[0].id;
+            $('.add-cart-button').attr("id", ""+products[0].id+"");
             $('#element').attr("placeholder", products[0].name);
         }
         else {
