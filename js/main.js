@@ -2,6 +2,7 @@ var data = {
     products  : [],
 };
 var usr;
+var cartArray = [];
 
 /**Display username after login and logout link */
 $.post('ajax/get_session.php', null, function (data) {
