@@ -39,18 +39,27 @@ function productRating() {
 function addToCart (e) {
     var sdata = { 'id': e };
     var found = false;
+    var newColor = false;
     $.post('ajax/get_product.php', sdata, function (data) {
         if (data.product) {
             var color = document.querySelector("#color-selected").value;
             var quantity = parseInt(document.querySelector("#quantity-selected").value);
-            for (const item of cartArray) {
-                if (item.name == data.product.name) {
-                    item.quantity += quantity;
-                    item.price = item.price * item.quantity;
-                    found = true;
+            if ( cartArray.length > 0 ) {
+                for (const item of cartArray) {
+                    if (item.name == data.product.name) {
+                        if (item.color != color) {
+                            newColor = true;
+                        } else {
+                            item.quantity += quantity;
+                            item.price = item.price * item.quantity;
+                            found = true;
+                            newColor = false;
+                            break;
+                        }
+                    }    
                 }
             }
-            if (!found) {
+            if (!found || newColor) {
                 var obj = { "name": data.product.name, "color": color, "quantity": quantity, "price": parseInt(data.product.price) };
                 cartArray.push(obj);
             }

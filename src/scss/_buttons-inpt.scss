@@ -131,3 +131,17 @@ input {
 .add-cart-button {
   width: 55%;
 }
+
+.remove-prod {
+  border: 1px solid darkred;
+  border-radius: 45px;
+  background: darkred;
+  color: white;
+  &:hover, &:active, &:focus:active, &:focus:visited, &:visited, &focus:visited, &:focus {
+    border: 1px solid darkred;    
+    border-radius: 45px;
+    background: darkred;
+    color: white;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+  }
+}
