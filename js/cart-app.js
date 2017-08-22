@@ -32,6 +32,16 @@ class Cart {
         sessionStorage.removeItem('cart');
         sessionStorage.setItem('cart', JSON.stringify(cartArray));
     }
+
+    makeOrder () {
+        if ( cartArray.length != 0 ){
+            if ( logedin === true ) {
+                window.location = "order.html";
+            }
+        } else {
+            alert("No products in your cart!");
+        }
+    }
 }
 app.component('cart', {
   bindings: {   
@@ -58,7 +68,7 @@ app.component('cart', {
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-success butoons_row" type="submit" data-dismiss="modal">Continue shopping</button>
-                                <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Continue with order</button>
+                                <button ng-click="$ctrl.makeOrder()" type="button" class="btn btn-success butoons_row" data-dismiss="modal">Continue with order</button>
                             </div>
                         </div>
                     </div>
@@ -81,4 +91,108 @@ app.component('cartButton', {
                     </a>
                 </div>`,
     controller: [CartButton]
+});
+
+
+class MakeOrderCtrl {
+    constructor () {
+
+    }
+
+    $onInit() {
+        this.cart = cartArray;
+        this.totalAmount = 0;
+        for (const item of cartArray) {
+            this.totalAmount += item.price;
+        }         
+    }
+
+    successOrder() {
+        alert("Your order has completed successful. You will receive a verification email. Thank you!");
+        sessionStorage.removeItem('cart');
+        window.location = "index.html";
+    }
+}
+
+app.component('makeOrder', {
+  bindings: {        
+    },
+    template: `<div id="order-form">
+                <form class="form-group">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Name</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John" pattern="([A-z]){2,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Surname</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Smith" pattern="([A-z]){2,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Email</label>
+                        <input type="email" class="form-control" id="formGroupExampleInput" placeholder="john@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Phone</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="6985214788" pattern="([0-9]){10}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Country</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Greece" pattern="([A-z]){2,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">State</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Attiki" pattern="([A-z]){2,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Town</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Aigaleo" pattern="([A-z]){2,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Address</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Makri 59" pattern="([A-z0-9]){4,20}">
+                    </div>
+                    <fieldset class="form-group row">
+                        <legend class="col-form-legend col-sm-2">Payment</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                Credit card
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                Cash on delivery
+                            </label>
+                            </div>
+                            <div class="form-check disabled">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                                Cash in our Store
+                            </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Your order</label>
+                    </div>  
+                    <hr>              
+                    <div ng-repeat="prd in $ctrl.cart track by $index">
+                        <span class="cart-pr-info">{{prd.name}}</span>
+                        <span class="cart-pr">Color: </span>
+                        <span class="cart-pr-info">{{prd.color}}</span>
+                        <span class="cart-pr">Quantity: </span>
+                        <span class="cart-pr-info">{{prd.quantity}}</span>
+                        <span class="cart-pr">Price: </span>
+                        <span class="cart-pr-info">{{prd.price}}€</span>
+                        <hr>
+                    </div>
+                    <button ng-click="$ctrl.successOrder()" id="success-order" class="btn btn-success butoons_row" type="submit" value="submit">Make Order</button>
+                </form>
+                <span class="cart-pr">Total amount: {{$ctrl.totalAmount}} €</span>
+                </div>`,
+    controller: MakeOrderCtrl
 });

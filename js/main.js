@@ -3,7 +3,7 @@ var data = {
 };
 var usr;
 var cartArray = JSON.parse(sessionStorage.getItem('cart') || '[]');
-
+var logedin = false;
 /**Display username after login and logout link */
 $.post('ajax/get_session.php', null, function (data) {
     if (data.username) {
@@ -13,11 +13,13 @@ $.post('ajax/get_session.php', null, function (data) {
         $('#insert').css('display', 'block');
         $('#index_info_hide').hide();
         $('#index_info_hide2').hide();
+        logedin = true;
     }  else {      
         $('.add-buttons').on('show.bs.modal', function (e) {
             e.preventDefault();
             alert('Login first!');
         });
+        logedin = false;
     }
 }, 'json');
 
