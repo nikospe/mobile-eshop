@@ -9,7 +9,7 @@ $.post('ajax/get_session.php', null, function (data) {
     if (data.username) {
         usr = data.username;
         $('#anthrwpaki').hide();
-        $('.nav-logout').show();
+        $('#wrap-logout').show();
         $('#insert').css('display', 'block');
         $('#index_info_hide').hide();
         $('#index_info_hide2').hide();
@@ -185,8 +185,8 @@ $(document).ready(function() {
         $('.search-inside-button').css('margin-left', '-12%' );     
     }
     if (window.location.href.includes('index')) {
-        $('#nav-search').hide();
+        $('#nav-search-hide').hide();
     } else {
-        $('#nav-search').show();
+        $('#nav-search-hide').show();
     }
 });

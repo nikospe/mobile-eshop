@@ -12,7 +12,8 @@ html, body {
 }
 #search_group_index {
     margin: auto;
-    width: 60%
+    width: 75%;
+    max-width: 750px;
 }
 
 #search-product-index {
@@ -53,6 +54,7 @@ main.main-container {
   background: url('../img/mobile.jpg') no-repeat center center;
   background-size: cover;
   height: 60%;
+  max-height: 450px;
   padding-bottom: 8%;
   padding-top: 85px;
   text-align: center;
@@ -82,9 +84,7 @@ main.main-container {
   background: #d6d6d6;
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
 }
-.myModal-content {
-    width: 325px;
-}
+
 .modal-footer {
   text-align: center;
 }
@@ -92,8 +92,9 @@ main.main-container {
     .myModal-content {
         width: auto;
     }
-    #myModal, #myModal2 {
+    #signin-modal, #logout-modal {
       width: 70%;
+      max-width: 1000px;
       margin: auto;
       left: 0;
     }
@@ -108,10 +109,14 @@ main.main-container {
 }
 .myModals-size {
     margin-left: 0;
-    left: 58%;
     margin-right: 0;
-    width: 54%;
     top: 20px;
+}
+#signin-modal, #logout-modal {
+      width: 70%;
+      max-width: 1000px;
+      margin: auto;
+      left: 0;
 }
 .marg {
   margin-top: 25px;
@@ -151,6 +156,9 @@ p {
   text-align: initial;
   font-weight: bold;
   color: darkred;
+}
+.ui-autocomplete {
+  z-index: 10000;
 }
 
 .for-display {

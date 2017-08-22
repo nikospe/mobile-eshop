@@ -26,34 +26,39 @@ class Cart {
     $onInit() {
         this.cart = cartArray;
     }
+    deleteButton (e) {
+        var itemForDelete = e.target.id;
+        cartArray = cartArray.filter(function(el){ return el.name != itemForDelete; });
+        sessionStorage.removeItem('cart');
+        sessionStorage.setItem('cart', JSON.stringify(cartArray));
+    }
 }
 app.component('cart', {
   bindings: {   
     },
     template: `<div class="modal fade" id="cartModal" role="dialog">
-                    <div class="modal-dialog myModal-content">
+                    <div class="modal-dialog myModal-content" id="cart-modal">
                         <div class="modal-content modals-background">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title logo">Shopping cart</h4>
-                                <img src="img/cart2.png" id="logo-cart">
+                                <img src="img/cart2.png" id="logo-cart"><span id="incart-title">Cart</span>
                             </div>
                             <div class="modal-body">
-                                <div class="row text-center">
-                                    <div class="col-xs-12 col-md-12">
-                                        <p class="submain-color">See your products</p><br>
-                                    </div>                    
+                                <div ng-repeat="prd in $ctrl.cart track by $index">
+                                    <span class="cart-pr-info">{{prd.name}}</span>
+                                    <span class="cart-pr">Color: </span>
+                                    <span class="cart-pr-info">{{prd.color}}</span>
+                                    <span class="cart-pr">Quantity: </span>
+                                    <span class="cart-pr-info">{{prd.quantity}}</span>
+                                    <span class="cart-pr">Price: </span>
+                                    <span class="cart-pr-info">{{prd.price}}€</span>
+                                    <button class="btn cart-delete-button" id="{{prd.name}}" ng-click="$ctrl.deleteButton($event)">X</button>
+                                    <hr>
                                 </div>
-                            </div>
-                            <div ng-repeat="item in $ctrl.cart">
-                                {{item.name}}
-                                <span>{{item.color}}</span>
-                                <span>{{item.quantity}}</span>
-                                <span>{{item.price}}</span>
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-success butoons_row" type="submit" data-dismiss="modal">Continue shopping</button>
-                                <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Make order</button>
+                                <button type="button" class="btn btn-success butoons_row" data-dismiss="modal">Continue with order</button>
                             </div>
                         </div>
                     </div>

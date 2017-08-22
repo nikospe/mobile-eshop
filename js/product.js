@@ -46,14 +46,16 @@ function addToCart (e) {
             for (const item of cartArray) {
                 if (item.name == data.product.name) {
                     item.quantity += quantity;
+                    item.price = item.price * item.quantity;
                     found = true;
                 }
             }
             if (!found) {
-                var obj = { "name": data.product.name, "color": color, "quantity": quantity, "price": data.product.price };
+                var obj = { "name": data.product.name, "color": color, "quantity": quantity, "price": parseInt(data.product.price) };
                 cartArray.push(obj);
             }
             sessionStorage.setItem('cart', JSON.stringify(cartArray));
+            alert("Added to cart!");
         }
     }, 'json');
 }

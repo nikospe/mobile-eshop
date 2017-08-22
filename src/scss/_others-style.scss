@@ -114,3 +114,24 @@
 .absolute-poss{
   position: absolute;
 }
+
+.cart-pr {
+  font-size: large;
+  color: blue;
+  padding-left: 5px;
+}
+
+#cart-modal {
+  width: 90%;
+  margin: auto;
+}
+.cart-pr-info {
+  font-size: large;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+.cart-delete-button {
+  position: absolute;
+  right: 0;
+}

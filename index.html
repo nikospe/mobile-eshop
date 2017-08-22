@@ -21,7 +21,7 @@
         <div class="searchWrap text-center">
             <div id="nav-search">
             <form class="form-group search-form-product" action="product.html" method="GET">
-                <div class="input-group">
+                <div class="input-group" id="nav-search-hide">
                     <input type="text" autocomplete="off" class="form-control search-label search-product" name="search-product"
                         id="search-product-nav">  
                     <ul class="dropdown-menu dropdown-menu-index" id="product-search-box-empty">
@@ -45,7 +45,7 @@
         <div class="accountWrap text-center">
             <div class="acountContainer">
                 <div id="wrap-logout">
-                    <a href="#" data-toggle="modal" data-target="#myModal2">Logout!</a>
+                    <a id="nav-logout" href="#" data-toggle="modal" data-target="#myModal2">Logout!</a>
                 </div>  
                 <div id="anthrwpaki">
                     <a href="#" data-toggle="modal" data-target="#myModal">
@@ -131,7 +131,7 @@
 <div class="modal fade myModals-size" id="myModal" role="dialog">
     <div class="modal-dialog myModal-content">
         <!-- Modal content-->
-        <div class="modal-content modals-background">
+        <div class="modal-content modals-background" id="sigin-modal">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title logo">Sign in!</h4>
@@ -168,7 +168,7 @@
 <div class="modal fade myModals-size" id="myModal2" role="dialog">
     <div class="modal-dialog myModal-content">
         <!-- Modal content-->
-        <div class="modal-content modals-background">
+        <div class="modal-content modals-background" id="logout-modal">
             <div class="modal-header text-center">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title submain-color">Are you sure to Logout?</h4>
@@ -191,9 +191,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="js/cart-app.js"></script>
 <script src="js/main.js"></script>
 <script src="js/modals.js"></script>
+<script src="js/cart-app.js"></script>
     <script src="js/index.js"></script>    
 </body>
 </html>
