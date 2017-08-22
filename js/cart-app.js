@@ -37,6 +37,8 @@ class Cart {
         if ( cartArray.length != 0 ){
             if ( logedin === true ) {
                 window.location = "order.html";
+            } else {
+                alert("Sign in first!");
             }
         } else {
             alert("No products in your cart!");

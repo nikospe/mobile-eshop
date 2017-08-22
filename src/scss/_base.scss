@@ -89,6 +89,12 @@ main.main-container {
   text-align: center;
 }
 @media screen and (max-width: 960px) {
+    #logo-ttl {
+      display: none;
+    }
+    .logoWrap {
+      left: 45%;
+    }
     .myModal-content {
         width: auto;
     }
