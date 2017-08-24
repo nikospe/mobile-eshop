@@ -28,11 +28,15 @@ class Cart {
     }
     deleteButton (e) {
         var itemForDelete = e.target.id;
-        cartArray = cartArray.filter(function(el){ return el.name != itemForDelete; });
+        var itemForDeleteColor = e.target.className.split(' ')[0];
+        for(var pro of cartArray){
+                if(pro.name == itemForDelete && e.target.className.includes(pro.color)) {
+                    var itemForDeleteIndex = cartArray.indexOf(pro);
+                       cartArray.splice(itemForDeleteIndex,1);
+            }
+        }
         sessionStorage.removeItem('cart');
         sessionStorage.setItem('cart', JSON.stringify(cartArray));
-        window.location = window.location.href;
-        $('#cartModal').modal();
     }
 
     makeOrder () {
@@ -66,7 +70,8 @@ app.component('cart', {
                                     <span class="cart-pr-info">{{prd.quantity}}</span>
                                     <span class="cart-pr">Price: </span>
                                     <span class="cart-pr-info">{{prd.price}}€</span>
-                                    <button class="btn cart-delete-button remove-prod" id="{{prd.name}}" ng-click="$ctrl.deleteButton($event)">X</button>
+                                    <button class=" {{prd.color}} btn cart-delete-button remove-prod" 
+                                    id="{{prd.name}}" ng-click="$ctrl.deleteButton($event)">X</button>
                                     <hr>
                                 </div>
                             </div>
